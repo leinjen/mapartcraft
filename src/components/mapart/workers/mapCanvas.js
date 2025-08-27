@@ -378,11 +378,28 @@ function setupExactColourCache() {
 
 function exactRGBToColourSetIdAndTone(pixelRGB) {
   const RGBBinary = (pixelRGB[0] << 16) + (pixelRGB[1] << 8) + pixelRGB[2];
-  return exactColourCache.get(RGBBinary);
+  let colourSetIdAndTone;
+
+  if (exactColourCache.has(RGBBinary)){
+    colourSetIdAndTone = exactColourCache.get(RGBBinary);
+  } else {
+    // New "transparent" color isnt in cache, return a dummy ID/tone
+    colourSetIdAndTone = {
+      colourSetId: "TRANSPARENT", // transparent
+      tone: "normal",
+    };
+  }
+  // console.log("Got ColourId ", colourSetIdAndTone.colourSetId, " and tone ", colourSetIdAndTone.tone);
+  return colourSetIdAndTone;
 }
 
 function isSupportBlockMandatoryForColourSetIdAndTone(colourSetIdAndTone) {
-  return coloursJSON[colourSetIdAndTone.colourSetId].blocks[selectedBlocks[colourSetIdAndTone.colourSetId]].supportBlockMandatory;
+  // console.log(colourSetIdAndTone);
+  if (colourSetIdAndTone.colourSetId === "TRANSPARENT" ) {
+    return false;
+  } else {
+    return coloursJSON[colourSetIdAndTone.colourSetId].blocks[selectedBlocks[colourSetIdAndTone.colourSetId]].supportBlockMandatory;
+  }
 }
 
 function colourSetIdAndToneToRGB(colourSetId, tone) {
@@ -461,19 +478,23 @@ function getMapartImageDataAndMaterials() {
         body: multimap_y / (128 * optionValue_mapSize_y),
       });
     }
-
+    
+    //console.log("Do pixel with A", canvasImageData.data[indexA]);
     let closestColourSetIdAndTone;
     if (
-      optionValue_modeNBTOrMapdat === MapModes.MAPDAT.uniqueId &&
+      // optionValue_modeNBTOrMapdat === MapModes.MAPDAT.uniqueId &&
       optionValue_transparency &&
       canvasImageData.data[indexA] < optionValue_transparencyTolerance
     ) {
       // we specially reserve 0,0,0,0 for transparent in mapdats
+      //console.log("Pixel with A ", canvasImageData.data[indexA], " set to trans!");
       canvasImageData.data[indexR] = 0;
       canvasImageData.data[indexG] = 0;
       canvasImageData.data[indexB] = 0;
       canvasImageData.data[indexA] = 0;
+      
     } else {
+      //let prevA = canvasImageData.data[indexA];
       canvasImageData.data[indexA] = 255; // full opacity
       const oldPixel = [canvasImageData.data[indexR], canvasImageData.data[indexG], canvasImageData.data[indexB]];
       switch (chosenDitherMethod.uniqueId) {
@@ -790,6 +811,9 @@ function getMapartImageDataAndMaterials() {
         }
         maps[whichMap_y][whichMap_x].materials[closestColourSetIdAndTone.colourSetId] += 1;
       }
+      // if(closestColourSetIdAndTone.colourSetId === "-1") {
+      //   console.log("Normal pixel set to trans!!!! with A", prevA);
+      // }
     }
   }
 }

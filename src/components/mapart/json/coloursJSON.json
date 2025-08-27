@@ -10641,6 +10641,30 @@
                 "supportBlockMandatory": false,
                 "flammable": false,
                 "presetIndex": 1
+            },
+            "2": {
+                "displayName": "Glass (DON'T SELECT AS COLOR!)",
+                "validVersions": {
+                    "1.12.2": {
+                        "NBTName": "glass",
+                        "NBTArgs": {}
+                    },
+                    "1.13.2": "&1.12.2",
+                    "1.14.4": "&1.12.2",
+                    "1.15.2": "&1.12.2",
+                    "1.16.5": "&1.12.2",
+                    "1.17.1": "&1.12.2",
+                    "1.18.2": "&1.12.2",
+                    "1.19": "&1.12.2",
+                    "1.20": "&1.12.2",
+                    "1.21": "&1.12.2",
+                    "1.21.2": "&1.12.2",
+                    "1.21.4": "&1.12.2",
+                    "1.21.5": "&1.12.2"
+                },
+                "supportBlockMandatory": false,
+                "flammable": false,
+                "presetIndex": 1
             }
         },
         "mapdatId": 61,

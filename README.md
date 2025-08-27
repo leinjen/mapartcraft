@@ -20,9 +20,9 @@ The default build settings assume the app is being hosted at https://YOUR-SITE-H
 
 # Usage
 
-Visit [MapartCraft](https://mike2b2t.github.io/mapartcraft). This is a fork of the original tool with newer version support.
+Visit [MapartCraft](https://leinjen.github.io/mapartcraft). This is a fork of mike2b2t fork of the original tool new features.
 
-You can find the original MapartCraft tool on [rebane2001.com](https://rebane2001.com/mapartcraft) or use a mirror on [web.archive.org](https://web.archive.org/web/*/https://rebane2001.com/mapartcraft).
+You can find the mike2b2t fork on [mike2b2t](https://mike2b2t.github.io/mapartcraft), the original MapartCraft tool on [rebane2001.com](https://rebane2001.com/mapartcraft) or use a mirror on [web.archive.org](https://web.archive.org/web/*/https://rebane2001.com/mapartcraft).
 
 # Credits/Thanks
 
@@ -33,4 +33,5 @@ You can find the original MapartCraft tool on [rebane2001.com](https://rebane200
 - [OpenMoji](https://github.com/hfg-gmuend/openmoji) for flags
 - Translation credits can be seen on the translated pages
 - [SelfAdjointOperator](https://github.com/SelfAdjointOperator) for some extra features
-- Code contributors can be seen on the [contributions page](https://github.com/mike2b2t/mapartcraft/graphs/contributors)
+- Code contributors can be seen on the [contributions page](https://github.com/leinjen/mapartcraft/graphs/contributors)
+- [mike2b2t](https://github.com/mike2b2t/mapartcraft) for some extra features

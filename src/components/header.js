@@ -17,7 +17,7 @@ class Header extends Component {
             {getLocaleString("FAQ/VIDEO-TUTORIAL")}
           </a>
           <span> | </span>
-          <a href="https://github.com/mike2b2t/mapartcraft" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/leinjen/mapartcraft" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
           <span> | </span>
@@ -25,7 +25,11 @@ class Header extends Component {
             2b2t Mapart Discord
           </a>
         </h3>
+
         <p>
+        <b>I've added transparency and staggered staircasing for carpet water canvas, PLEASE TEST IN CREATIVE BEFORE USING IT FOR REAL.</b>
+          <br></br>
+        <br></br>
           {getLocaleString("DESCRIPTION/1")}
           <a href="https://www.reddit.com/r/2b2t/" target="_blank" rel="noopener noreferrer">
             2b2t
@@ -43,7 +47,7 @@ class Header extends Component {
             MapartCraft
           </a>
           {getLocaleString("DESCRIPTION/7")}
-          <a href="https://github.com/mike2b2t/mapartcraft/issues" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/leinjen/mapartcraft/issues" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
           {"."}

@@ -32,6 +32,25 @@
         "localeKey": "MAP-SETTINGS/3D/FULL-LIGHT",
         "toneKeys": ["light"],
         "extra": true
+      },
+      "STAGGERED_WE_871": {
+        "uniqueId": 11,
+        "localeKey": "MAP-SETTINGS/3D/STAGGERED_WE_871",
+        "toneKeys": ["normal"],
+        "extra": false
+      },
+      "STAGGERED_EW_27": {
+        "uniqueId": 12,
+        "localeKey": "MAP-SETTINGS/3D/STAGGERED_EW_27",
+        "toneKeys": ["normal"],
+        "extra": false
+      }
+      ,
+      "STAGGERED_EW_87": {
+        "uniqueId": 13,
+        "localeKey": "MAP-SETTINGS/3D/STAGGERED_EW_87",
+        "toneKeys": ["normal"],
+        "extra": false
       }
     }
   },

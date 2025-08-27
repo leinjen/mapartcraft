@@ -42,7 +42,7 @@
 }
 
 .progress {
-  background-color: black;
+  background-color: "transparent";
 }
 
 .progressText {
