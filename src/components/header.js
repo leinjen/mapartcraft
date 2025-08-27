@@ -20,15 +20,19 @@ class Header extends Component {
           <a href="https://github.com/leinjen/mapartcraft" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
-          <span> | </span>
-          <a href="https://discord.gg/r7Tuerq" target="_blank" rel="noopener noreferrer">
-            2b2t Mapart Discord
-          </a>
         </h3>
 
         <p>
-        <b>I've added transparency and staggered staircasing for carpet water canvas, PLEASE TEST IN CREATIVE BEFORE USING IT FOR REAL.</b>
-          <br></br>
+          <b>I've added transparency and staggered staircasing for carpet water canvas, PLEASE TEST IN CREATIVE BEFORE USING IT FOR REAL.</b>
+        <br></br>
+          Forked from  
+          &nbsp;
+          <a href="https://github.com/mike2b2t/mapartcraft" target="_blank" rel="noopener noreferrer">
+            mike2b2t
+          </a>
+          &nbsp;
+           who added new features for the 2b2t server.
+        <br></br>
         <br></br>
           {getLocaleString("DESCRIPTION/1")}
           <a href="https://www.reddit.com/r/2b2t/" target="_blank" rel="noopener noreferrer">
